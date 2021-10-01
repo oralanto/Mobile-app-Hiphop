@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Hiphop",
+    "slug": "Hiphop",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Hiphop"
+}
