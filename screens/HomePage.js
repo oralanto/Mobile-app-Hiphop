@@ -21,8 +21,8 @@ const HomePage = () => {
             <Card.Title>Débutant</Card.Title>
             <Card.Divider />
             <Text style={{ marginBottom: 10 }}>
-              The idea with React Native Elements is more about component
-              structure than actual design.
+              Dans le cours débutant vous apprendrez les bases pour commencer et
+              comprendre la danse Hip-Hop.
             </Text>
             <Card.Image source={require("../images/Beginner.jpeg")} />
             <Button
@@ -40,8 +40,8 @@ const HomePage = () => {
             <Card.Title>Intermediaire</Card.Title>
             <Card.Divider />
             <Text style={{ marginBottom: 10 }}>
-              The idea with React Native Elements is more about component
-              structure than actual design.
+              Dans le cours intermediaire vous allez apprendre de nombreux step
+              fondametal du Hip-Hop.
             </Text>
             <Card.Image source={require("../images/advanced.jpeg")} />
             <Button
@@ -59,8 +59,8 @@ const HomePage = () => {
             <Card.Title>Avancé</Card.Title>
             <Card.Divider />
             <Text style={{ marginBottom: 10 }}>
-              The idea with React Native Elements is more about component
-              structure than actual design.
+              Dans le cours avancé vous allez apprendre freestyler avec les
+              bases du Hip-Hop.
             </Text>
             <Card.Image source={require("../images/Intermediate.jpeg")} />
             <Button

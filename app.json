@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "Hiphop",
+    "name": "Hiphop app",
     "slug": "Hiphop",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": ""
   },
   "name": "Hiphop"
 }
