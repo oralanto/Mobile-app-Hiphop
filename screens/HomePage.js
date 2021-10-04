@@ -20,7 +20,7 @@ const HomePage = () => {
             années 1970 et popularisés par les dance crews aux États-Unis.
           </Text>
           <Card>
-            <Card.Title>Débutant</Card.Title>
+            <Card.Title style={styles.title}>Débutant</Card.Title>
             <Card.Divider />
             <Text style={styles.description}>
               Dans le cours débutant vous apprendrez les bases pour commencer et
@@ -28,7 +28,7 @@ const HomePage = () => {
             </Text>
             <Card.Image source={require("../images/Beginner.jpeg")} />
             <Button
-              icon={<Icon name="code" color="#ffffff" />}
+              color={colors.primary}
               buttonStyle={{
                 borderRadius: 0,
                 marginLeft: 0,
@@ -39,7 +39,7 @@ const HomePage = () => {
             />
           </Card>
           <Card>
-            <Card.Title>Intermediaire</Card.Title>
+            <Card.Title style={styles.title}>Intermediaire</Card.Title>
             <Card.Divider />
             <Text style={styles.description}>
               Dans le cours intermediaire vous allez apprendre de nombreux step
@@ -47,7 +47,7 @@ const HomePage = () => {
             </Text>
             <Card.Image source={require("../images/advanced.jpeg")} />
             <Button
-              icon={<Icon name="code" color="#ffffff" />}
+              color={colors.primary}
               buttonStyle={{
                 borderRadius: 0,
                 marginLeft: 0,
@@ -58,7 +58,7 @@ const HomePage = () => {
             />
           </Card>
           <Card>
-            <Card.Title>Avancé</Card.Title>
+            <Card.Title style={styles.title}>Avancé</Card.Title>
             <Card.Divider />
             <Text style={styles.description}>
               Dans le cours avancé vous allez apprendre freestyler avec les
@@ -66,12 +66,13 @@ const HomePage = () => {
             </Text>
             <Card.Image source={require("../images/Intermediate.jpeg")} />
             <Button
-              icon={<Icon name="code" color="#ffffff" />}
+              color={colors.primary}
               buttonStyle={{
                 borderRadius: 0,
                 marginLeft: 0,
                 marginRight: 0,
                 marginBottom: 0,
+                backgroundColor: colors.primary,
               }}
               title="Commencer le cours avancé"
             />
