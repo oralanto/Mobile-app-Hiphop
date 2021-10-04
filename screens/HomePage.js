@@ -1,12 +1,15 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 import { Card, Button, Icon } from "react-native-elements";
 
-const HomePage = () => {
+import colors from "../assets/colors";
+
+const HomePage = ({ navigation }) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <View>
+        <View style={styles.container}>
           <Text h1 style={styles.title}>
             La danse Hip-Hop
           </Text>
@@ -18,15 +21,15 @@ const HomePage = () => {
             années 1970 et popularisés par les dance crews aux États-Unis.
           </Text>
           <Card>
-            <Card.Title>Débutant</Card.Title>
+            <Card.Title style={styles.title}>Débutant</Card.Title>
             <Card.Divider />
-            <Text style={{ marginBottom: 10 }}>
+            <Text style={styles.description}>
               Dans le cours débutant vous apprendrez les bases pour commencer et
               comprendre la danse Hip-Hop.
             </Text>
             <Card.Image source={require("../images/Beginner.jpeg")} />
             <Button
-              icon={<Icon name="code" color="#ffffff" />}
+              color={colors.primary}
               buttonStyle={{
                 borderRadius: 0,
                 marginLeft: 0,
@@ -34,18 +37,19 @@ const HomePage = () => {
                 marginBottom: 0,
               }}
               title="Commencer le cours débutant"
+              onPress={() => navigation.navigate("Lesson")}
             />
           </Card>
           <Card>
-            <Card.Title>Intermediaire</Card.Title>
+            <Card.Title style={styles.title}>Intermediaire</Card.Title>
             <Card.Divider />
-            <Text style={{ marginBottom: 10 }}>
+            <Text style={styles.description}>
               Dans le cours intermediaire vous allez apprendre de nombreux step
               fondametal du Hip-Hop.
             </Text>
             <Card.Image source={require("../images/advanced.jpeg")} />
             <Button
-              icon={<Icon name="code" color="#ffffff" />}
+              color={colors.primary}
               buttonStyle={{
                 borderRadius: 0,
                 marginLeft: 0,
@@ -56,20 +60,21 @@ const HomePage = () => {
             />
           </Card>
           <Card>
-            <Card.Title>Avancé</Card.Title>
+            <Card.Title style={styles.title}>Avancé</Card.Title>
             <Card.Divider />
-            <Text style={{ marginBottom: 10 }}>
+            <Text style={styles.description}>
               Dans le cours avancé vous allez apprendre freestyler avec les
               bases du Hip-Hop.
             </Text>
             <Card.Image source={require("../images/Intermediate.jpeg")} />
             <Button
-              icon={<Icon name="code" color="#ffffff" />}
+              color={colors.primary}
               buttonStyle={{
                 borderRadius: 0,
                 marginLeft: 0,
                 marginRight: 0,
                 marginBottom: 0,
+                backgroundColor: colors.primary,
               }}
               title="Commencer le cours avancé"
             />
@@ -83,16 +88,22 @@ const HomePage = () => {
 export default HomePage;
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.secondary,
+  },
   title: {
     width: "100%",
     padding: 10,
     fontSize: 25,
     fontWeight: "bold",
     textAlign: "center",
-    backgroundColor: "lightgray",
+    color: colors.title,
+    backgroundColor: colors.primary,
   },
   description: {
     padding: 10,
+    marginBottom: 10,
     textAlign: "justify",
+    color: colors.text,
   },
 });
