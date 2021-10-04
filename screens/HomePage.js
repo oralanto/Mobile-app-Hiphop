@@ -1,10 +1,11 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 import { Card, Button, Icon } from "react-native-elements";
 
 import colors from "../assets/colors";
 
-const HomePage = () => {
+const HomePage = ({ navigation }) => {
   return (
     <SafeAreaView>
       <ScrollView>
@@ -36,6 +37,7 @@ const HomePage = () => {
                 marginBottom: 0,
               }}
               title="Commencer le cours débutant"
+              onPress={() => navigation.navigate("Lesson")}
             />
           </Card>
           <Card>
