@@ -7,8 +7,8 @@ import {
   FlatList,
   Linking,
 } from "react-native";
-import { Card, Button, Icon } from "react-native-elements";
-import Video from "react-native-video";
+import { Card } from "react-native-elements";
+import YoutubePlayer from "react-native-youtube-iframe";
 import { ScrollView } from "react-native-gesture-handler";
 
 import colors from "../assets/colors";
@@ -30,13 +30,7 @@ const LessonList = () => {
               « Bounce » signifie « rebondir » en français, il suffit de fléchir
               légèrement les jambes pour imiter un rebond.
             </Text>
-            <Button
-              color={colors.primary}
-              title="Bounce Vidéo"
-              onPress={() =>
-                Linking.openURL("https://www.youtube.com/watch?v=F_xK9F9AP48")
-              }
-            />
+            <YoutubePlayer height={300} play={false} videoId={"F_xK9F9AP48"} />
             <Text style={styles.exercice}>A vous de jouer !</Text>
             <FlatList
               style={styles.exercice}
@@ -64,13 +58,7 @@ const LessonList = () => {
               partie supérieur de son corps vers l'avant puis vers l'arrière ou
               sur les cotés.
             </Text>
-            <Button
-              color={colors.primary}
-              title="Rocking Vidéo"
-              onPress={() =>
-                Linking.openURL("https://www.youtube.com/watch?v=ucItVcz5BHs")
-              }
-            />
+            <YoutubePlayer height={300} play={false} videoId={"ucItVcz5BHs"} />
             <Text style={styles.exercice}>A vous de jouer !</Text>
             <FlatList
               style={styles.exercice}
