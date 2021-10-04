@@ -2,11 +2,13 @@ import React from "react";
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 import { Card, Button, Icon } from "react-native-elements";
 
+import colors from "../assets/colors";
+
 const HomePage = () => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <View>
+        <View style={styles.container}>
           <Text h1 style={styles.title}>
             La danse Hip-Hop
           </Text>
@@ -20,7 +22,7 @@ const HomePage = () => {
           <Card>
             <Card.Title>Débutant</Card.Title>
             <Card.Divider />
-            <Text style={{ marginBottom: 10 }}>
+            <Text style={styles.description}>
               Dans le cours débutant vous apprendrez les bases pour commencer et
               comprendre la danse Hip-Hop.
             </Text>
@@ -39,7 +41,7 @@ const HomePage = () => {
           <Card>
             <Card.Title>Intermediaire</Card.Title>
             <Card.Divider />
-            <Text style={{ marginBottom: 10 }}>
+            <Text style={styles.description}>
               Dans le cours intermediaire vous allez apprendre de nombreux step
               fondametal du Hip-Hop.
             </Text>
@@ -58,7 +60,7 @@ const HomePage = () => {
           <Card>
             <Card.Title>Avancé</Card.Title>
             <Card.Divider />
-            <Text style={{ marginBottom: 10 }}>
+            <Text style={styles.description}>
               Dans le cours avancé vous allez apprendre freestyler avec les
               bases du Hip-Hop.
             </Text>
@@ -83,16 +85,22 @@ const HomePage = () => {
 export default HomePage;
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.secondary,
+  },
   title: {
     width: "100%",
     padding: 10,
     fontSize: 25,
     fontWeight: "bold",
     textAlign: "center",
-    backgroundColor: "lightgray",
+    color: colors.title,
+    backgroundColor: colors.primary,
   },
   description: {
     padding: 10,
+    marginBottom: 10,
     textAlign: "justify",
+    color: colors.text,
   },
 });
