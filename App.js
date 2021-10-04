@@ -7,8 +7,8 @@ import LessonList from "./screens/LessonList";
 export default function App() {
   return (
     <View style={styles.container}>
-      <HomePage />
-      {/* <LessonList /> */}
+      {/* <HomePage /> */}
+      <LessonList />
     </View>
   );
 }
